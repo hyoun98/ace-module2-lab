@@ -505,7 +505,7 @@ function configureApp (app: ReturnType<typeof express>, seq: typeof sequelize) {
       pagination: false,
       include
     })
-
+	console.log("test")
     // create a wallet when a new user is registered using API
     if (name === 'User') { // vuln-code-snippet neutral-line registerAdminChallenge
       resource.create.send.before((req: Request, res: Response, context: { instance: { id: any }, continue: any }) => { // vuln-code-snippet vuln-line registerAdminChallenge
